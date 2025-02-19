@@ -1,0 +1,42 @@
+# QGIS NSPD Plugin Metadata
+# (C) 2025 Alexandr_Fedorov
+
+# Mandatory Metadata:
+
+[general]
+name=Open NSPD Maps
+qgisMinimumVersion=3.0
+description= Охват окна на сайте NSPD
+version=1.0
+author=Alexandr Fedorov
+
+
+about=Этот плагин открывает текущий охват карты на сайте NSPD простым нажатием кнопки. Связь в telegram: https://t.me/russofed
+
+tracker=https://github.com/Russofed/open_in_nspd_map
+repository=https://github.com/Russofed/open_in_nspd_map
+
+
+# Recommended Metadata:
+
+hasProcessingProvider=no
+
+changelog=1.0: Version
+
+tags=NSPD, search, НСПД
+
+homepage=https://github.com/Russofed/open_in_nspd_map
+category=Plugins
+icon=icon.png
+
+# experimental flag
+experimental=False
+
+# deprecated flag (applies to the whole plugin, not just a single version)
+deprecated=False
+
+# plugin_dependencies=
+
+# category=Web
+
+server=False
