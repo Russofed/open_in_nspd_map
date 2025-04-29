@@ -1,4 +1,8 @@
 Данный плагин позваляет открывать охват окна карты Qgis на сайте  Портала пространственных данных Национальная система пространственных данных(НСПД)
 
-![image](https://github.com/user-attachments/assets/4712762a-ef47-4d08-ad60-09156f13c499)
+
+![image](https://github.com/user-attachments/assets/fe33074d-c083-4f5f-b0a1-de791879860e)
+
+
+
 
