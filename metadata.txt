@@ -9,7 +9,7 @@ qgisMinimumVersion=3.0
 description= Охват окна на сайте NSPD
 version=2.0
 author=Alexandr Fedorov
-
+email=russouj@gmail.com
 
 about=Этот плагин открывает текущий охват карты на сайте NSPD простым нажатием кнопки. Связь в telegram: https://t.me/russofed
 
