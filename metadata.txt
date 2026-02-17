@@ -7,7 +7,7 @@
 name=Open NSPD Maps
 qgisMinimumVersion=3.0
 description= Охват окна на сайте NSPD
-version=2.0
+version=2.1
 author=Alexandr Fedorov
 email=russouj@gmail.com
 
@@ -21,7 +21,9 @@ repository=https://github.com/Russofed/open_in_nspd_map
 
 hasProcessingProvider=no
 
-changelog=1.0: Version
+changelog=
+    2.1 - Поправлен масштаб открытия на сайте NSPD
+
 
 tags=NSPD, search, НСПД
 

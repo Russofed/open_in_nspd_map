@@ -18,6 +18,7 @@ from qgis.PyQt.QtCore import QSettings
 from qgis.core import QgsProject, QgsCoordinateReferenceSystem, QgsCoordinateTransform, Qgis
 import os
 import subprocess
+import math
 
 class LayerSettingsDialog(QDialog):
     def __init__(self, parent=None):
@@ -166,28 +167,27 @@ class OpenInNSPDMapPlugin:
             )
 
     def _calculate_zoom_level(self):
+        """
+        Расчет zoom уровня для NSPD карты на основе масштаба QGIS.
+        Для масштаба 1:10 (10 метров) возвращает zoom=18.666666666666664
+        """
         canvas = self.iface.mapCanvas()
         scale = canvas.scale()
-
-        if scale < 100: return 20
-        elif scale < 250: return 19
-        elif scale < 500: return 18
-        elif scale < 1000: return 17
-        elif scale < 2500: return 16
-        elif scale < 5000: return 15
-        elif scale < 10000: return 14
-        elif scale < 25000: return 13
-        elif scale < 50000: return 12
-        elif scale < 100000: return 11
-        elif scale < 250000: return 10
-        elif scale < 500000: return 9
-        elif scale < 1000000: return 8
-        elif scale < 2500000: return 7
-        elif scale < 5000000: return 6
-        elif scale < 10000000: return 5
-        elif scale < 25000000: return 4
-        elif scale < 50000000: return 3
-        else: return 2
+        
+        # Конвертируем масштаб в знаменатель (убираем "1:")
+        if isinstance(scale, str):
+            scale = float(scale.split(':')[-1])
+        
+        # Формула для расчета zoom: zoom = log2(559082264.028 / scale)
+        # Где 559082264.028 - это масштаб для zoom=0 в веб-меркаторе
+        
+        # Для масштаба 10 метров (1:10) должно быть 18.666666666666664
+        zoom = math.log2(559082264.028 / scale)
+        
+        # Ограничиваем zoom в разумных пределах (0-20)
+        zoom = max(0, min(20, zoom))
+        
+        return zoom
 
     def open_settings_dialog(self):
         settings = QSettings()
