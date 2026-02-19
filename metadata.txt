@@ -11,7 +11,8 @@ version=2.1
 author=Alexandr Fedorov
 email=russouj@gmail.com
 
-about=Этот плагин открывает текущий охват карты на сайте NSPD простым нажатием кнопки. Связь в telegram: https://t.me/russofed
+about= This plugin opens the current map coverage on the NSPD website with a simple click of a button.
+Этот плагин открывает текущий охват карты на сайте NSPD простым нажатием кнопки. Связь в telegram: https://t.me/russofed
 
 tracker=https://github.com/Russofed/open_in_nspd_map
 repository=https://github.com/Russofed/open_in_nspd_map
